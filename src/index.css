@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+}
+
+html,
+body {
+  min-height: 100%;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
