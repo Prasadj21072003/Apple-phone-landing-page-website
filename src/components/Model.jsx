@@ -26,7 +26,7 @@ const Model = ({
     <View
       i={i}
       id={gsapType}
-      className={`   h-full  w-full absolute   ${
+      className={` cursor-grab   h-full  w-full absolute   ${
         i === 2 ? "right-[-100%]" : ""
       } `}
     >
