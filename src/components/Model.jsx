@@ -49,7 +49,8 @@ const Model = ({
         name={`${i === 1}? "small" : "large" `}
         position={[0, 0, 0]}
       >
-        {/*<Suspense
+        {
+          <Suspense
             fallback={
               <Html className=" w-full h-full flex items-center justify-center">
                 <Loader />
@@ -57,7 +58,8 @@ const Model = ({
             }
           >
             <Iphone item={item} size={size} scale={i === 1 ? 15 : 17} />
-          </Suspense>*/}
+          </Suspense>
+        }
       </group>
     </View>
   );
