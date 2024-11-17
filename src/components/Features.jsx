@@ -47,7 +47,7 @@ const Features = () => {
         },
       });
     } else {
-      gsap.to(".img-grow", {
+      /*  gsap.to(".img-grow", {
         opacity: 1,
         scale: 1,
         ease: "power1",
@@ -55,6 +55,32 @@ const Features = () => {
           trigger: ".img-grow",
           toggleActions: "restart reverse restart reverse",
           start: "top 79%",
+          end: "top 25%",
+          scrub: 5.5,
+        },
+      }); */
+
+      gsap.to("#explore1Img", {
+        opacity: 1,
+        scale: 1,
+        ease: "power1",
+        scrollTrigger: {
+          trigger: "#explore1Img",
+          toggleActions: "restart reverse restart reverse",
+          start: "top 70%",
+          end: "top 25%",
+          scrub: 5.5,
+        },
+      });
+
+      gsap.to("#explore2Img", {
+        opacity: 1,
+        scale: 1,
+        ease: "power1",
+        scrollTrigger: {
+          trigger: "#explore2Img",
+          toggleActions: "restart reverse restart reverse",
+          start: "top 65%",
           end: "top 25%",
           scrub: 5.5,
         },
