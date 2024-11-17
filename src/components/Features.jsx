@@ -55,7 +55,7 @@ const Features = () => {
           trigger: ".img-grow",
           toggleActions: "restart reverse restart reverse",
           start: "top 79%",
-          end: "top 30%",
+          end: "top 25%",
           scrub: 5.5,
         },
       });

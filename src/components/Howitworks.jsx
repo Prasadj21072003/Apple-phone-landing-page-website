@@ -29,7 +29,7 @@ what the code inside `useGSAP` is doing: */
         scrollTrigger: {
           trigger: "#chipimg1",
           toggleActions: "play none none none",
-          start: "top 40%",
+          start: "top 35%",
         },
       });
     }
