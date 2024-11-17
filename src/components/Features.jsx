@@ -32,18 +32,35 @@ const Features = () => {
         start: "top 65%",
       },
     });
-    gsap.to(".img-grow", {
-      opacity: 1,
-      scale: 1,
-      ease: "power1",
-      scrollTrigger: {
-        trigger: ".img-grow",
-        toggleActions: "restart reverse restart reverse",
-        start: "top 85%",
-        end: "top 30%",
-        scrub: 5.5,
-      },
-    });
+
+    if (window.innerWidth > 640) {
+      gsap.to(".img-grow", {
+        opacity: 1,
+        scale: 1,
+        ease: "power1",
+        scrollTrigger: {
+          trigger: ".img-grow",
+          toggleActions: "restart reverse restart reverse",
+          start: "top 85%",
+          end: "top 30%",
+          scrub: 5.5,
+        },
+      });
+    } else {
+      gsap.to(".img-grow", {
+        opacity: 1,
+        scale: 1,
+        ease: "power1",
+        scrollTrigger: {
+          trigger: ".img-grow",
+          toggleActions: "restart reverse restart reverse",
+          start: "top 79%",
+          end: "top 30%",
+          scrub: 5.5,
+        },
+      });
+    }
+
     gsap.from(".g_text ", {
       opacity: 0,
       y: 13,

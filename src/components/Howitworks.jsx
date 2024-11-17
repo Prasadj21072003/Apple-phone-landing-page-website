@@ -12,15 +12,27 @@ const Howitworks = () => {
 library to create animations triggered by scrolling actions on the webpage. Here's a breakdown of
 what the code inside `useGSAP` is doing: */
   useGSAP(() => {
-    gsap.from("#chipimg1", {
-      scale: 2,
-      ease: "power1.in",
-      scrollTrigger: {
-        trigger: "#chipimg1",
-        toggleActions: "play none none none",
-        start: "top 45%",
-      },
-    });
+    if (window.innerWidth > 640) {
+      gsap.from("#chipimg1", {
+        scale: 2,
+        ease: "power1.in",
+        scrollTrigger: {
+          trigger: "#chipimg1",
+          toggleActions: "play none none none",
+          start: "top 45%",
+        },
+      });
+    } else {
+      gsap.from("#chipimg1", {
+        scale: 2,
+        ease: "power1.in",
+        scrollTrigger: {
+          trigger: "#chipimg1",
+          toggleActions: "play none none none",
+          start: "top 40%",
+        },
+      });
+    }
 
     gsap.from("#videoref1", {
       scrollTrigger: {
