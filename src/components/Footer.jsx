@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { footerLinks } from "../constants";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Footer = () => {
+const Footer = memo(() => {
   useGSAP(() => {
     gsap.to("#footer", {
       y: 0,
@@ -53,38 +53,6 @@ const Footer = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Footer;
-
-/*
-<div id="footer" className=" flex flex-col opacity-[0]  translate-y-[50px]">
-      <div className="text-[0.8rem] text-left">
-        <p className="font-semibold text-gray ">
-          More ways to shop:{" "}
-          <span className="underline text-blue">Find an Apple Store </span>
-          or <span className="underline text-blue">other retailer</span> near
-          you.
-        </p>
-        <p className="font-semibold text-gray ">Or call 000800-040-1966</p>
-      </div>
-      <div className="bg-neutral-700 my-[1rem] h-[1px] w-full" />
-      <div className="flex justify-between">
-        <div className="">
-          <p className="font-semibold text-gray text-[0.8rem]">
-            Copright @ 2024 Apple Inc. All rights reserved.
-          </p>
-        </div>
-        <div className="w-fit flex">
-          {footerLinks.map((link, i) => (
-            <p key={link} className="font-semibold text-gray text-[0.8rem]">
-              {link}{" "}
-              {i !== footerLinks.length - 1 && (
-                <span className="mx-[0.5rem]"> | </span>
-              )}
-            </p>
-          ))}
-        </div>
-      </div>
-    </div>
-*/

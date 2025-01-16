@@ -1,13 +1,13 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 
 import { ScrollTrigger } from "gsap/all";
 import { explore1Img, explore2Img, exploreVideo } from "../utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Features = () => {
+const Features = memo(() => {
   const videoref = useRef();
   useGSAP(() => {
     gsap.from("#featuretitle ", {
@@ -187,7 +187,6 @@ const Features = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Features;
-// max-xl:h-[275px]

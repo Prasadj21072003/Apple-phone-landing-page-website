@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 import { hightlightsSlides } from "../constants";
 import { pauseImg, playImg, replayImg } from "../utils";
 import { useGSAP } from "@gsap/react";
@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
-const Videocarousal = () => {
+const Videocarousal = memo(() => {
   const videoref = useRef([]);
   const videodivref = useRef([]);
   const videospanref = useRef([]);
@@ -239,6 +239,6 @@ const Videocarousal = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Videocarousal;

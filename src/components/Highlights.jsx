@@ -1,10 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 import { rightImg, watchImg } from "../utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Videocarousal from "./Videocarousal";
 
-const Highlights = () => {
+const Highlights = memo(() => {
   /* The `useGSAP` hook in the `Highlights` component is utilizing the `@gsap/react` library to animate
 certain elements using GSAP (GreenSock Animation Platform). */
   useGSAP(() => {
@@ -57,6 +57,6 @@ certain elements using GSAP (GreenSock Animation Platform). */
       </div>
     </div>
   );
-};
+});
 
 export default Highlights;

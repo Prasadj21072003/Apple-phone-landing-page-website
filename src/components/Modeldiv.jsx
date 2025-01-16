@@ -1,6 +1,13 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { lazy, Suspense, useEffect, useRef, useState } from "react";
+import React, {
+  lazy,
+  memo,
+  Suspense,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 //import Model from "./Model";
 const Model = lazy(() => import("./Model"));
 
@@ -15,7 +22,7 @@ import Loader from "./Loader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Modeldiv = () => {
+const Modeldiv = memo(() => {
   const [size, setsize] = useState("small");
   const [model, setmodel] = useState({
     title: "iPhone 15 Pro in Natural Titanium",
@@ -163,6 +170,6 @@ component. */
       </div>
     </div>
   );
-};
+});
 
 export default Modeldiv;

@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import { chipImg, frameImg, frameVideo } from "../utils";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
-const Howitworks = () => {
+const Howitworks = memo(() => {
   const videoref1 = useRef();
 
   /* The `useGSAP` hook in the provided code snippet is utilizing the GSAP (GreenSock Animation Platform)
@@ -132,6 +132,6 @@ what the code inside `useGSAP` is doing: */
       </div>
     </div>
   );
-};
+});
 
 export default Howitworks;

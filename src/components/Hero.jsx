@@ -1,9 +1,9 @@
-import React, { lazy, useEffect, useState } from "react";
+import React, { lazy, memo, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { heroVideo, smallHeroVideo } from "../utils/index";
 
-const Hero = () => {
+const Hero = memo(() => {
   const [dataload, setdataload] = useState(false);
 
   const [videosrc, setvideosrc] = useState(
@@ -80,6 +80,6 @@ listener for the `resize` event on the window object. */
       </div>
     </section>
   );
-};
+});
 
 export default Hero;

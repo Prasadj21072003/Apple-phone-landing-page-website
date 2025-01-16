@@ -1,7 +1,8 @@
 import { appleImg, searchImg, bagImg } from "../utils/index";
 import { navLists } from "../constants/index";
+import { memo } from "react";
 
-const Nav = () => {
+const Nav = memo(() => {
   return (
     <div className="w-full h-full p-[1.25rem] sm:px-[2.5rem] flex justify-between items-center ">
       <nav className="flex w-full max-w-">
@@ -35,6 +36,6 @@ const Nav = () => {
       </nav>
     </div>
   );
-};
+});
 
 export default Nav;
